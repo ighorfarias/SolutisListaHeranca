@@ -1,0 +1,23 @@
+public class TesteEmpregado {
+    public static void main(String[] args) {
+        Empregado empregado = new Empregado("Maria Oliveira", "Avenida Central, 456", "9876-5432", 101, 3000.0, 15.0);
+
+        // Testando os métodos herdados da classe Pessoa
+        System.out.println("Nome: " + empregado.getNome());
+        System.out.println("Endereço: " + empregado.getEndereco());
+        System.out.println("Telefone: " + empregado.getTelefone());
+
+        System.out.println("Código do Setor: " + empregado.getCodigoSetor());
+        System.out.println("Salário Base: " + empregado.getSalarioBase());
+        System.out.println("Imposto (%): " + empregado.getImposto());
+
+        System.out.println("Salário Líquido: " + empregado.calcularSalario());
+
+        empregado.setSalarioBase(3500.0);
+        empregado.setImposto(10.0);
+
+        System.out.println("Novo Salário Base: " + empregado.getSalarioBase());
+        System.out.println("Novo Imposto (%): " + empregado.getImposto());
+        System.out.println("Novo Salário Líquido: " + empregado.calcularSalario());
+    }
+}
