@@ -1,0 +1,23 @@
+public class TesteVendedor {
+    public static void main(String[] args) {
+        Vendedor vendedor = new Vendedor("Ana Pereira", "Rua das Vendas, 456", "9123-4567", 404, 3000.0, 12.0, 20000.0, 10.0);
+
+        System.out.println("Nome: " + vendedor.getNome());
+        System.out.println("Endereço: " + vendedor.getEndereco());
+        System.out.println("Telefone: " + vendedor.getTelefone());
+        System.out.println("Código do Setor: " + vendedor.getCodigoSetor());
+        System.out.println("Salário Base: " + vendedor.getSalarioBase());
+        System.out.println("Imposto (%): " + vendedor.getImposto());
+        System.out.println("Valor das Vendas: " + vendedor.getValorVendas());
+        System.out.println("Comissão (%): " + vendedor.getComissao());
+
+        System.out.println("Salário Líquido: " + vendedor.calcularSalario());
+
+        vendedor.setValorVendas(25000.0);
+        vendedor.setComissao(12.0);
+
+        System.out.println("Novo Valor das Vendas: " + vendedor.getValorVendas());
+        System.out.println("Nova Comissão (%): " + vendedor.getComissao());
+        System.out.println("Novo Salário Líquido: " + vendedor.calcularSalario());
+    }
+}
